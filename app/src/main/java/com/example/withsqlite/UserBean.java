@@ -1,8 +1,11 @@
 package com.example.withsqlite;
 
-public class UserBean {
+import java.io.Serializable;
+
+public class UserBean implements Serializable {
     private String name,passWord;
     private String  phone;
+    private int id;
 
     public UserBean(String name, String passWord, String phone) {
         this.name = name;
@@ -32,5 +35,13 @@ public class UserBean {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
